@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1  Morbi elementum, sapien sit amet vehicula tincidunt, lorem purus vehicula purus, ut tempor libero sem at orci.
+    section.css-table
+      section.one-column
+        section.cell
+          h2 Login
+
+            -if (message)
+              p
+                = message
+
+            form(action='/login',method='post')
+              div
+                label(for='username') Username:
+                input(type='text',name='username',id='username')
+                label(for='password') Password:
+                input(type='text',name='password',id='password')
+                input(type='submit',name='submit',value='Submit').submit-button
